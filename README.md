@@ -44,12 +44,14 @@ Declares permissions and worker registration.
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ________________________________________
+
 Important Dependencies
 •	Google Sign-In SDK
 •	Google Play Services Auth
 •	WorkManager
 •	AndroidX Security Crypto
 •	Gmail API (com.google.api-client)
+
 ________________________________________
 Gmail API Setup
 •	Enable Gmail API in Google Cloud Console
