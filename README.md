@@ -3,6 +3,7 @@ Overview
 The Gmail Alert App is an Android application designed to monitor incoming Gmail messages from specific email addresses and trigger a custom notification sound (ringtone) when an email is received. Users can add or remove monitored emails, choose a ringtone, and the app will periodically check for new emails in the background.
 ________________________________________
 Features
+
 1.	Google Sign-In Integration
 2.	Encrypted email address storage (AES256)
 3.	Custom ringtone picker and preview
@@ -12,6 +13,7 @@ Features
 7.	Email list management with long-press delete
 ________________________________________
 App Flow
+
 1. Login and Permissions
 •	User logs in via Google Sign-In.
 •	The app requests Gmail API access with gmail.readonly scope.
@@ -28,60 +30,91 @@ o	Buttons for adding email, selecting ringtone, and manually triggering a check
 •	Uses WorkManager for both manual and periodic checking.
 4. Secure Storage
 •	Uses AndroidX Security EncryptedSharedPreferences
-•	Saves:
-o	emails: Set
-o	ringtone_uri: String
+•	Saves emails Set	ringtone
+
 ________________________________________
 Key Files
+
 1. MainActivity.java
 Handles all UI interactions, manages data storage, and triggers background work.
-2. EmailPollWorker.java
+
+3. EmailPollWorker.java
 Runs in the background to access Gmail using OAuth2 token and matches senders.
-3. activity_main.xml
+
+5. activity_main.xml
 Defines the layout with scrollable form, editable fields, and styled components.
-4. AndroidManifest.xml
+
+7. AndroidManifest.xml
 Declares permissions and worker registration.
+
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ________________________________________
 
 Important Dependencies
+
 •	Google Sign-In SDK
-•	Google Play Services Auth
+
+•	Google Play Services Auth 
+
 •	WorkManager
+
 •	AndroidX Security Crypto
+
 •	Gmail API (com.google.api-client)
 
 ________________________________________
 Gmail API Setup
 •	Enable Gmail API in Google Cloud Console
+
 •	Configure OAuth 2.0 Client ID for Android
+
 •	Add SHA-1 certificate fingerprint
+
 ________________________________________
 Deployment Checklist
+
 •	Google Sign-In working with real Gmail
+
 •	Gmail API enabled in GCP Console
+
 •	PeriodicWorkRequest set to 15 mins
+
 •	Runtime permissions handled (if needed)
-•	Ringtone plays only once per new email
+
+•	Ringtone plays only once per new email  
+
 •	Play Store graphics, description, and privacy policy ready
+
 ________________________________________
 Testing Tips
+
 •	Add your own Gmail as monitored sender
+
 •	Send a test email and check logs using Logcat
+
 •	Verify token access, ringtone playing, and background execution
+
 ________________________________________
 Future Improvements
+
 •	Firebase Crashlytics integration
+
 •	Notification UI with sender preview
+
 •	Multi-account support
+
 •	Retry logic for offline mode
+
 ________________________________________
 Gmail Alert App – Get Instant Alerts for Important Emails!
+
 Stay notified the moment important emails hit your inbox!
+
 Gmail Alert App lets you choose specific sender email addresses and get a custom ringtone alert whenever a new mail arrives from them.
 ________________________________________
 🔔 Key Features:
+
 ✅ Real-time Alerts
 Get notified instantly (every 15 minutes) for emails from selected senders. Perfect for job updates, client communication, or critical messages.
 
