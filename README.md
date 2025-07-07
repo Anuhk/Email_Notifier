@@ -84,16 +84,22 @@ ________________________________________
 🔔 Key Features:
 ✅ Real-time Alerts
 Get notified instantly (every 15 minutes) for emails from selected senders. Perfect for job updates, client communication, or critical messages.
+
 ✅ Custom Ringtone Selection
 Choose your own ringtone to make alerts stand out. Know which email is important—without looking at your phone!
+
 ✅ Secure Email Storage
 Your monitored email addresses are securely encrypted using Android’s EncryptedSharedPreferences.
+
 ✅ Google Sign-In Integration
 Seamlessly log in using your Gmail account—quick, easy, and secure.
+
 ✅ Remove Saved Addresses
 Update your monitored senders anytime by long-pressing to delete.
+
 ✅ Lightweight and Easy to Use
 Minimal UI with simple setup—works quietly in the background.
+
 ________________________________________
 🛠 How it Works:
 1.	Sign in using your Gmail account.
